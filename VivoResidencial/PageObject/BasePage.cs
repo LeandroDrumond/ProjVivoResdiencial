@@ -6,13 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VivoResidencial.PageObject {
-    public abstract class BasePage {
+namespace VivoResidencial {
+    public  class BasePage {
 
         public IWebDriver driver;
+        public MassaDados massa;
 
         protected BasePage(IWebDriver driver) {
             this.driver = driver;
+        }
+
+        protected BasePage() {
+        
         }
 
         protected void Clicar(IWebElement element) {
@@ -20,6 +25,7 @@ namespace VivoResidencial.PageObject {
             if (element.Displayed) {
 
                 element.Click();
+                
 
             }
         }
