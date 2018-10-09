@@ -114,7 +114,7 @@ namespace VivoResidencial {
                     IWebElement aux = ListaPlanos[i];
 
                     string aux2 = aux.Text;
-                    aux2 = aux2.Replace("\n", string.Empty).Replace("\r", string.Empty);
+                    aux2 = aux2.Replace("\n", string.Empty).Replace("\r", string.Empty).Replace("/mês", string.Empty);
 
                     if (bValidaVivoCombos) {
 
